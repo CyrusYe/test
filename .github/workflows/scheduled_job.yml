@@ -1,9 +1,9 @@
 name: Scheduled Python Script
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # 每日 15:00 UTC 執行（台灣為 UTC+8，即 23:00）
-  workflow_dispatch:      # 允許手動觸發（可選）
+ # schedule:
+ #   - cron: '*/5 * * * *'  # 每日 15:00 UTC 執行（台灣為 UTC+8，即 23:00）
+ # workflow_dispatch:      # 允許手動觸發（可選）
 
 jobs:
   run-script:
