@@ -1,1 +1,27 @@
+name: Scheduled Python Script
 
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # 每日 15:00 UTC 執行（台灣為 UTC+8，即 23:00）
+  workflow_dispatch:      # 允許手動觸發（可選）
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # 指定 Python 版本
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # 若有需求，否則略過這行
+
+    - name: Run script
+      run: |
+        python test_pageinfo.py  # 替換為你的腳本名稱
