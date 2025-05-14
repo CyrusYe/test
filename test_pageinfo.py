@@ -30,7 +30,7 @@ def auth_token(username):
 #活動進行中測試
 @pytest.mark.parametrize("username, status", [
     ("",1), #遊客
-    ("10099155146",103)
+    ("10099155146",104)
     ])
 def test_uat_battle(username,status):
     if username == "":
