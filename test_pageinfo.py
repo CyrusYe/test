@@ -2,7 +2,7 @@ import pytest
 import requests
 import json
 
-domain_url ="https://trade.gtsuat.com"
+domain_url ="https://39.108.127.136:6002"
 
 
 def auth_token(username):
@@ -30,12 +30,7 @@ def auth_token(username):
 #活動進行中測試
 @pytest.mark.parametrize("username, status", [
     ("",1), #遊客
-    ("15599900575",2), #未KYC
-    ("15599900574",3), #未激活
-    ("15599900557",4), #A9
-    ("15599900564",103), #已激活未報名
-    ("15599900556",104), #已報名
-    ("15599900566",104)
+    ("10099155146",103)
     ])
 def test_uat_battle(username,status):
     if username == "":
