@@ -24,4 +24,4 @@ jobs:
 
     - name: Run script
       run: |
-        python test_pageinfo.py  # 替換為你的腳本名稱
+        pytest test_pageinfo.py  # 替換為你的腳本名稱
